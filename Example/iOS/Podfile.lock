@@ -4,8 +4,8 @@ PODS:
     - Flutter
   - hi_flutter (0.0.1):
     - Flutter
-  - HiRouter/Core (0.1.0)
-  - HiRouter/Web (0.1.0):
+  - HiRouter/Core (1.0.0)
+  - HiRouter/Web (1.0.0):
     - HiRouter/Core
   - LookinServer (1.0.4)
   - Nimble (9.2.1)
@@ -44,7 +44,7 @@ SPEC CHECKSUMS:
   Flutter: bdfa2e8fe0e2880a2c6a58a0b1a8675c262a07af
   FlutterPluginRegistrant: 2afd5ea46d3a949472c9b7da6462d8fbf7d8b16e
   hi_flutter: b81817145315c86543a892c6954185c2935688f5
-  HiRouter: 602bfccc40a1c18e9ffe449a0ce91ec00b4da0d7
+  HiRouter: 7dbcae1e9340164504c191a09db73e6c2e51cb43
   LookinServer: 743c1681771d0a8dcc38825325a080c3186404a5
   Nimble: e7e615c0335ee4bf5b0d786685451e62746117d5
   Quick: 6473349e43b9271a8d43839d9ba1c442ed1b7ac4

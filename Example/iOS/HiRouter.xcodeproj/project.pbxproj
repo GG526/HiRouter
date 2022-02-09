@@ -215,7 +215,6 @@
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "HiRouter_Example" */;
 			buildPhases = (
 				B60BE7ACDE08E41706D00896 /* [CP] Check Pods Manifest.lock */,
-				3FFD55EC27B2716B00B29EF1 /* [CP-User] Run Flutter Build multiple_flutters_module Script */,
 				08B86230591716A2E4166C22 /* [CP-User] Run Flutter Build hi_flutter Script */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
@@ -321,24 +320,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../hi_flutter/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
-		};
-		3FFD55EC27B2716B00B29EF1 /* [CP-User] Run Flutter Build multiple_flutters_module Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP-User] Run Flutter Build multiple_flutters_module Script";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../hi_flutter/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh embed\n";
 		};
 		B60BE7ACDE08E41706D00896 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
