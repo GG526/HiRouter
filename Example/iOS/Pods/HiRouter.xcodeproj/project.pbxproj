@@ -1,0 +1,455 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		210FF1D0C4A9A1C17F0521E454258135 /* HiRouter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FA6FBF990BBEDFE2466D4013573E4C7 /* HiRouter-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		433FDC350472CDC95ACA8720AA5568B3 /* Collection+HiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16C235A483D15F0906E36B2DDA844A2 /* Collection+HiRouter.swift */; };
+		4EAB3C6F082116782FD8693809E8C96B /* HiQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36142FC7D8AE552EBB9C625605005796 /* HiQueue.swift */; };
+		5D08656D6A1E4B8ED2F9BB6472EC51D3 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A1CBDD1E8D4449808928143AF04373 /* Router.swift */; };
+		61425F81B87F60593BABCF5B55C0EF1F /* HiWebDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C2E6231C28FA8EAFA15BF9A79416FF /* HiWebDelegate.swift */; };
+		6931708E9EF163BDB8DB30F2F2B4051C /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0860B3CAAB9B0565ED94FCEC71062A /* Log.swift */; };
+		786B074DEAF71B34014BB6C7D6C63E81 /* HiRouter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A65867024B0D2FA27DD1760676B00D /* HiRouter-dummy.m */; };
+		7A31D9145F695A9A234D11419C24074B /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7601EAD5AB5814B4853856552C664B35 /* Entity.swift */; };
+		98724DCBB8617E50A1407C7FF87E4D2C /* HiWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C5F299F70D04DDE921DB935B40F07 /* HiWebView.swift */; };
+		B42C037B75A5A40D37E61F4D5F108083 /* RouterError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C713440FC001B5464416AE59DA261CDD /* RouterError.swift */; };
+		DA99C01B1C76B57916E0BF75B8DD10BD /* HiWebProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5363D4CE70A8F11F2B73943A77893A74 /* HiWebProxy.swift */; };
+		DC4976568BEA63FBB83C80D585AC0170 /* RouteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704BBCEA1FA3313ECE530368A06306CC /* RouteManager.swift */; };
+		EB95A81E4726801C78EC2DB9A31665D2 /* Lock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43C07F3C8B3D9C8F0109FE07ED29F66 /* Lock.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		27DEB826AECB794D50A066719A367CDA /* HiRouter-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HiRouter-prefix.pch"; sourceTree = "<group>"; };
+		3086AB786E4D70BC29196F7949687545 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		36142FC7D8AE552EBB9C625605005796 /* HiQueue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HiQueue.swift; path = HiRouter/Classes/Core/HiQueue.swift; sourceTree = "<group>"; };
+		3A529800EAD14E5C28FD7D47C5DDBF5B /* HiRouter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HiRouter.debug.xcconfig; sourceTree = "<group>"; };
+		4FA6FBF990BBEDFE2466D4013573E4C7 /* HiRouter-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HiRouter-umbrella.h"; sourceTree = "<group>"; };
+		5363D4CE70A8F11F2B73943A77893A74 /* HiWebProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HiWebProxy.swift; path = HiRouter/Classes/Web/HiWebProxy.swift; sourceTree = "<group>"; };
+		56C2E6231C28FA8EAFA15BF9A79416FF /* HiWebDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HiWebDelegate.swift; path = HiRouter/Classes/Web/HiWebDelegate.swift; sourceTree = "<group>"; };
+		644EC8897F7F3E7D9C06825916F7C2CD /* HiRouter.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = HiRouter.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		704BBCEA1FA3313ECE530368A06306CC /* RouteManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RouteManager.swift; path = HiRouter/Classes/Core/RouteManager.swift; sourceTree = "<group>"; };
+		7601EAD5AB5814B4853856552C664B35 /* Entity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Entity.swift; path = HiRouter/Classes/Core/Entity.swift; sourceTree = "<group>"; };
+		76A6500A5D9B89275C73B50B0732597B /* HiRouter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HiRouter.modulemap; sourceTree = "<group>"; };
+		A3A1CBDD1E8D4449808928143AF04373 /* Router.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Router.swift; path = HiRouter/Classes/Core/Router.swift; sourceTree = "<group>"; };
+		A43C07F3C8B3D9C8F0109FE07ED29F66 /* Lock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Lock.swift; path = HiRouter/Classes/Core/Lock.swift; sourceTree = "<group>"; };
+		A9580ABB8A92F1160968DCE63440F127 /* HiRouter */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = HiRouter; path = libHiRouter.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B02D6162F4231E9E2499C6AB88CCFC0E /* HiRouter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HiRouter.release.xcconfig; sourceTree = "<group>"; };
+		C00AA745E555E3FB83C1883D33E2A6DE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		C713440FC001B5464416AE59DA261CDD /* RouterError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RouterError.swift; path = HiRouter/Classes/Core/RouterError.swift; sourceTree = "<group>"; };
+		DB2C5F299F70D04DDE921DB935B40F07 /* HiWebView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HiWebView.swift; path = HiRouter/Classes/Web/HiWebView.swift; sourceTree = "<group>"; };
+		E16C235A483D15F0906E36B2DDA844A2 /* Collection+HiRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Collection+HiRouter.swift"; path = "HiRouter/Classes/Core/Collection+HiRouter.swift"; sourceTree = "<group>"; };
+		E2A65867024B0D2FA27DD1760676B00D /* HiRouter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HiRouter-dummy.m"; sourceTree = "<group>"; };
+		FE0860B3CAAB9B0565ED94FCEC71062A /* Log.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Log.swift; path = HiRouter/Classes/Core/Log.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		32C2E2C8DEE1200CF9B72903BE90E802 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		104DE0D1BE4DB7964EEBA6D35E47B2C8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E16C235A483D15F0906E36B2DDA844A2 /* Collection+HiRouter.swift */,
+				7601EAD5AB5814B4853856552C664B35 /* Entity.swift */,
+				36142FC7D8AE552EBB9C625605005796 /* HiQueue.swift */,
+				A43C07F3C8B3D9C8F0109FE07ED29F66 /* Lock.swift */,
+				FE0860B3CAAB9B0565ED94FCEC71062A /* Log.swift */,
+				704BBCEA1FA3313ECE530368A06306CC /* RouteManager.swift */,
+				A3A1CBDD1E8D4449808928143AF04373 /* Router.swift */,
+				C713440FC001B5464416AE59DA261CDD /* RouterError.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		10C0D0EBDC57F5D403C83FB092E35703 = {
+			isa = PBXGroup;
+			children = (
+				A3292A472E8486645D93733885D93D17 /* Frameworks */,
+				471BD37B331D87EC0F4209B3E2391CF7 /* HiRouter */,
+				4C5A0BE371A2258AA6EC74A12008898E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		471BD37B331D87EC0F4209B3E2391CF7 /* HiRouter */ = {
+			isa = PBXGroup;
+			children = (
+				104DE0D1BE4DB7964EEBA6D35E47B2C8 /* Core */,
+				F8E9E9B488FFEC6813FA1D7C42FF7718 /* Pod */,
+				4DB6D6DD17BFD1B0EDAB4F342E5C6EF9 /* Support Files */,
+				617441F8C595990677F049CDDBBF1C56 /* Web */,
+			);
+			name = HiRouter;
+			path = ../../..;
+			sourceTree = "<group>";
+		};
+		4C5A0BE371A2258AA6EC74A12008898E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A9580ABB8A92F1160968DCE63440F127 /* HiRouter */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4DB6D6DD17BFD1B0EDAB4F342E5C6EF9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				76A6500A5D9B89275C73B50B0732597B /* HiRouter.modulemap */,
+				E2A65867024B0D2FA27DD1760676B00D /* HiRouter-dummy.m */,
+				27DEB826AECB794D50A066719A367CDA /* HiRouter-prefix.pch */,
+				4FA6FBF990BBEDFE2466D4013573E4C7 /* HiRouter-umbrella.h */,
+				3A529800EAD14E5C28FD7D47C5DDBF5B /* HiRouter.debug.xcconfig */,
+				B02D6162F4231E9E2499C6AB88CCFC0E /* HiRouter.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/iOS/Pods/Target Support Files/HiRouter";
+			sourceTree = "<group>";
+		};
+		617441F8C595990677F049CDDBBF1C56 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				56C2E6231C28FA8EAFA15BF9A79416FF /* HiWebDelegate.swift */,
+				5363D4CE70A8F11F2B73943A77893A74 /* HiWebProxy.swift */,
+				DB2C5F299F70D04DDE921DB935B40F07 /* HiWebView.swift */,
+			);
+			name = Web;
+			sourceTree = "<group>";
+		};
+		A3292A472E8486645D93733885D93D17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8E9E9B488FFEC6813FA1D7C42FF7718 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				644EC8897F7F3E7D9C06825916F7C2CD /* HiRouter.podspec */,
+				C00AA745E555E3FB83C1883D33E2A6DE /* LICENSE */,
+				3086AB786E4D70BC29196F7949687545 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		71FA8DD04B5984176F391D1D4BBE43A0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				210FF1D0C4A9A1C17F0521E454258135 /* HiRouter-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		7687E73F2C650986C1B2B7E4693E16C2 /* HiRouter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B518985DAB1087A4F311264C0BA89B61 /* Build configuration list for PBXNativeTarget "HiRouter" */;
+			buildPhases = (
+				71FA8DD04B5984176F391D1D4BBE43A0 /* Headers */,
+				695514CD4E93300EF8AD3142C0F5DC8D /* Sources */,
+				32C2E2C8DEE1200CF9B72903BE90E802 /* Frameworks */,
+				37E24D5D587A7A88F087CD201E0BAA96 /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HiRouter;
+			productName = HiRouter;
+			productReference = A9580ABB8A92F1160968DCE63440F127 /* HiRouter */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AD0E84851EF9B210BD0C4F9AA371623C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+			};
+			buildConfigurationList = 06802A051D546BFBF19E24129B5B6FB5 /* Build configuration list for PBXProject "HiRouter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 10C0D0EBDC57F5D403C83FB092E35703;
+			productRefGroup = 4C5A0BE371A2258AA6EC74A12008898E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7687E73F2C650986C1B2B7E4693E16C2 /* HiRouter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		37E24D5D587A7A88F087CD201E0BAA96 /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/HiRouter/HiRouter.modulemap",
+				"${PODS_ROOT}/Headers/Public/HiRouter/HiRouter-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/HiRouter-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/HiRouter/HiRouter.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/HiRouter/HiRouter-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		695514CD4E93300EF8AD3142C0F5DC8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				433FDC350472CDC95ACA8720AA5568B3 /* Collection+HiRouter.swift in Sources */,
+				7A31D9145F695A9A234D11419C24074B /* Entity.swift in Sources */,
+				4EAB3C6F082116782FD8693809E8C96B /* HiQueue.swift in Sources */,
+				786B074DEAF71B34014BB6C7D6C63E81 /* HiRouter-dummy.m in Sources */,
+				61425F81B87F60593BABCF5B55C0EF1F /* HiWebDelegate.swift in Sources */,
+				DA99C01B1C76B57916E0BF75B8DD10BD /* HiWebProxy.swift in Sources */,
+				98724DCBB8617E50A1407C7FF87E4D2C /* HiWebView.swift in Sources */,
+				EB95A81E4726801C78EC2DB9A31665D2 /* Lock.swift in Sources */,
+				6931708E9EF163BDB8DB30F2F2B4051C /* Log.swift in Sources */,
+				DC4976568BEA63FBB83C80D585AC0170 /* RouteManager.swift in Sources */,
+				5D08656D6A1E4B8ED2F9BB6472EC51D3 /* Router.swift in Sources */,
+				B42C037B75A5A40D37E61F4D5F108083 /* RouterError.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		18F6A4B277519893B7CBBEBDE9DDA7A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		72B53520CC8FC9800E243531AB2EE5BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A529800EAD14E5C28FD7D47C5DDBF5B /* HiRouter.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/HiRouter/HiRouter-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MODULEMAP_FILE = Headers/Public/HiRouter/HiRouter.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = HiRouter;
+				PRODUCT_NAME = HiRouter;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		72C5A7FEDD620A7B9FFCEDC51424D3F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		768A3F99185A7D48A134DD8B04E52AA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B02D6162F4231E9E2499C6AB88CCFC0E /* HiRouter.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/HiRouter/HiRouter-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MODULEMAP_FILE = Headers/Public/HiRouter/HiRouter.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = HiRouter;
+				PRODUCT_NAME = HiRouter;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		06802A051D546BFBF19E24129B5B6FB5 /* Build configuration list for PBXProject "HiRouter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72C5A7FEDD620A7B9FFCEDC51424D3F2 /* Debug */,
+				18F6A4B277519893B7CBBEBDE9DDA7A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B518985DAB1087A4F311264C0BA89B61 /* Build configuration list for PBXNativeTarget "HiRouter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72B53520CC8FC9800E243531AB2EE5BC /* Debug */,
+				768A3F99185A7D48A134DD8B04E52AA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AD0E84851EF9B210BD0C4F9AA371623C /* Project object */;
+}

@@ -1,0 +1,6 @@
+module HiRouter {
+  umbrella header "HiRouter-umbrella.h"
+
+  export *
+  module * { export * }
+}

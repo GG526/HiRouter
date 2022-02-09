@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+    <head lang="zh-cmn-Hans">
+        <meta charset="UTF-8">
+            <title>HiRouter Test</title>
+            <meta name="renderer" content="webkit">
+                <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+                    <meta name="viewport" content="width=device-width,initial-scale=0.5,user-scalable=no"/>
+                </head>
+    <style>
+        .btn {
+            text-align: center;
+            background: #eee;
+            color: #000;
+            padding: 20px;
+            margin: 30px;
+            font-size: 24px;
+            border-radius: 4px;
+            box-shadow: 4px 2px 10px #999;
+        }
+        
+        .btn:active {
+            opacity: .7;
+            box-shadow: 4px 2px 10px #555;
+        }
+    </style>
+    <body>
+        <div class="btn" onclick="openBaiduWeb()">Open Web</div>
+        <div class="btn" onclick="openFlutter()">Open Flutter</div>
+        <div class="btn" onclick="openNative()">Open Native</div>
+        <div class="btn" onclick="callSyn()">Synchronous call</div>
+        <div class="btn" onclick="callAsyn()">Asynchronous call</div>
+        <div class="btn" onclick="call404()">404</div>
+        <script>
+            
+            function openBaiduWeb() {
+                invokeClient('web', 'open/web', {url: 'https://www.baidu.com/'});
+            }
+            
+            function openFlutter() {
+                invokeClient('native', 'open/flutter');
+            }
+            
+            function openNative() {
+                invokeClient('flutter', 'open/native');
+            }
+            
+            function callSyn() {
+                invokeClient('web', 'synchronous', {status: 'Synchronous'});
+            }
+            
+            function callAsyn() {
+                invokeClient('web', 'asynchronous', {status: 'Asynchronous'}, function(data) {
+                    alert(JSON.stringify(data));
+                });
+            }
+            
+            function call404() {
+                invokeClient('web', '404', {status: '404'}, function() {
+                    alert(JSON.stringify(data));
+                });
+            }
+            
+            const isDefined = (obj) => (typeof obj !== 'undefined');
+            const isFunction = (obj) => (typeof obj === 'function');
+            const isObject = (obj) => (Object.prototype.toString.call(obj) === '[object Object]');
+            const isString = (str) => (typeof str === 'string');
+            
+            let callbackUUID = 10000; // 回调方法唯一序号
+            const callbackIdGenerator = () => ++callbackUUID; // 回调方法ID生成器
+            
+            const apiSupports = {}; // 缓存所有 api support
+            const apiFunctions = {}; // 缓存所有 api function
+            const apiEvents = {}; // 缓存所有 api eventName
+            const allCallbacks = { // 缓存所有回调方法
+                10() { // 用于需要刷新当前页面的接口
+                    location.reload();
+                },
+            };
+            
+            /*
+             * 定时器生成器
+             * @param  {Function} handler - 执行方法
+             * @param  {Number} delay - 延迟时间
+             * @return {Function} 返回销毁器
+             */
+            function timerGenerator(handler, delay) {
+                let timer = setTimeout(() => {
+                    timer = null;
+                    if (isFunction(handler)) {
+                        handler();
+                    }
+                }, delay);
+                
+                return function destroy() {
+                    if (timer) {
+                        clearTimeout(timer);
+                        timer = null;
+                    }
+                };
+            }
+            
+            /*
+             * iframe 生成器
+             * @param  {String} url - iframe地址
+             * @return {Function} 返回销毁器
+             */
+            function iframeGenerator(url) {
+                const body = document.body || document.documentElement;
+                
+                let iframe;
+                let timerDestoryer = timerGenerator(() => {
+                    timerDestoryer = null;
+                    
+                    iframe = document.createElement('iframe');
+                    iframe.style.cssText = 'display:none;width:0px;height:0px;';
+                    iframe.src = url;
+                    body.appendChild(iframe);
+                }, 100); // 防止销毁器执行太快导致 android 端收不到请求
+                
+                return function destroy() {
+                    if (timerDestoryer) {
+                        timerDestoryer();
+                    } else if (iframe) {
+                        body.removeChild(iframe);
+                        iframe = null;
+                    }
+                };
+            }
+            
+            // 客户端返回的状态码命名为 "result", 这里增加同等 "code"
+            function fixResult(result) {
+                if (isObject(result)) {
+                    if (isDefined(result.code)) {
+                        result.result = result.code;
+                    }
+                    if (isDefined(result.result)) {
+                        result.code = result.result;
+                    }
+                }
+                return result;
+            }
+            
+            // 回调会执行多次，某些场景需要回调以队列形式执行
+            let pending = false;
+            const queue = [];
+            const next = () => {
+                if (!pending && queue.length) {
+                    pending = true;
+                    queue.shift()(() => {
+                        pending = false;
+                        next();
+                    });
+                }
+            };
+            const push = fn => queue.push(fn) === 1 && next();
+            
+            /*
+             * 调用回调方法
+             * @param {Number} callbackId - 回调方法ID
+             * @param {Object} result - 回调结果
+             * @param {Number} result.result 回调状态
+             * @param {Object} result.data 回调数据
+             */
+            function execCallback(callback, result) {
+                if (typeof callback === 'number') {
+                    callback = allCallbacks[callback];
+                }
+                if (isFunction(callback)) {
+                    result = fixResult(result);
+                    push((next) => { // eslint-disable-line no-shadow
+                        setTimeout(() => {
+                            
+                            // 回调如果报错, pending 就一直为 true, 队列就永远不会消耗
+                            try {
+                                callback(result);
+                            } catch (ex) {
+                                
+                                console.error(ex); // eslint-disable-line no-console
+                            }
+                            next();
+                        }, 0); // 异步执行回调
+                    });
+                }
+            }
+            
+            /*
+             * 执行事件监听
+             * @param {String} eventName - 事件名称
+             * @param {Object} result - 事件结果
+             * @param {Number} result.result 事件状态(0表示正常)
+             * @param {Object} result.data 事件数据
+             */
+            function dispatchEvent(eventName, result) {
+                
+                const callbackName = eventCallbackNameGenerator(eventName);
+                const handlers = allCallbacks[callbackName];
+                
+                
+                if (isArray(handlers)) {
+                    handlers.forEach(handler => handler(fixResult(result)));
+                }
+            }
+            
+            const eventCallbackNameGenerator = eventName => `evt-${eventName}`;
+            
+            function invokeUrlInApp(url) {
+                const iframeDestoryer = iframeGenerator(url, () => {
+                    /*
+                     正常情况下是不会回调到这里的, 只有客户端没有捕获这个 url 请求,
+                     浏览器才会发起 iframe 的加载, 但这个 url 实际上是不存在的,
+                     */
+                    console.error('Client not catch!'); // eslint-disable-line no-console
+                });
+                
+                // 删除 iframe
+                setTimeout(iframeDestoryer, 3000); // 延迟不能为0, 否则 Android 客户端有概率收不到
+            }
+            
+            function urlGenerator(module, method, params, callbackId) {
+                const encode = encodeURIComponent;
+                
+                if (method.match(/^get/)) {
+                    method = method.replace(/^get/, '');
+                    method = method.slice(0, 1).toLowerCase() + method.slice(1);
+                }
+                
+                const host = encode(module);
+                const port = callbackId ? `:${callbackId}` : '';
+                const path = encode(method);
+                const queryString = params ? `?query=${encode(JSON.stringify(params))}` : '';
+                return `HiRouterExample://${host}${port}/${path}${queryString}`;
+            }
+            
+            function invokeClient(module, method, params, callback) {
+                if (!module || !method) {
+                    return;
+                }
+                
+                let callbackId;
+                
+                if (isFunction(callback)) {
+                    callbackId = callbackIdGenerator();
+                    allCallbacks[callbackId] = callback;
+                }
+                invokeUrlInApp(urlGenerator(module, method, params, callbackId));
+            }
+            
+        </script>
+    </body>
+</html>

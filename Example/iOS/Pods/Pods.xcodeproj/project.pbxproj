@@ -1,0 +1,658 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		17494EBF1602FA3700885556796C3EB1 /* Pods-HiRouter_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F9945CEB49E239AC0B2FAC852CB14D08 /* Pods-HiRouter_Tests-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		34E0E7F83EAF332E45C41B3C38AE8AEA /* Pods-HiRouter_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 118B51AEA39563284A9FC9B24B16074F /* Pods-HiRouter_Example-dummy.m */; };
+		3A7BA4D5D24FA7B816ED9E2FA663F462 /* Pods-HiRouter_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B4D7729E6C028385631A08F5853F511E /* Pods-HiRouter_Example-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FA3D78EB2EFACB22CC6DCA813E77DB7F /* Pods-HiRouter_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 11818DB76815C538FC805186BDF8FA33 /* Pods-HiRouter_Tests-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		21EC766A3904A65A144CB3CB99A3252D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD6ED83392F2A5914CDFCB3F7EC2C03E /* hi_flutter.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 267308F856F0000E396E028D6598B985;
+			remoteInfo = hi_flutter;
+		};
+		28C1428302CCC8739F6443A9858489C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0715542763E3ECEC4138FA1CDF924F49 /* Flutter.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D40F1FD973363D8FE0BF347DCFCE2318;
+			remoteInfo = Flutter;
+		};
+		400FD356746FDAD5F7ACA38C8E0C3CFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F09D854B1A799E20ACCB75B4517BE68A /* Quick.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 24C9F58642BA3A311BF4777F8B8E66E1;
+			remoteInfo = Quick;
+		};
+		5F198AA45E49E42437357DD5931734E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04253B5BE017880DFBFE90C41E022183 /* LookinServer.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 648108237631EEA52299D347ABDCA30C;
+			remoteInfo = LookinServer;
+		};
+		6961ACC51A93630FD8BA46EAC18E06D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7EC05EC19924E3E461FBF5BB85053E3A /* HiRouter.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 7687E73F2C650986C1B2B7E4693E16C2;
+			remoteInfo = HiRouter;
+		};
+		AD0687B32E1FF86560CB074FD5B6F62F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60FFF60FCE093C668A0376AF938FD8AA /* SnapKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6913FCF4B90C224E55FE5C821AFB90D2;
+			remoteInfo = SnapKit;
+		};
+		E5FE7DFD502FDA3D6F4832BFA135DF13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ACBEF5BBA74291254AEC078C0DBC4914;
+			remoteInfo = "Pods-HiRouter_Example";
+		};
+		E8BCB70BA1729BDEC7384568A8EDA4DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D07CF14FDE6D5A220CE5A75334A2006 /* FlutterPluginRegistrant.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F2E948E76CD2597F86E3BF2377900FD5;
+			remoteInfo = FlutterPluginRegistrant;
+		};
+		FD5A8337D6D4ACA426F6587E327A1C94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 973DE084ED387E3289F7A0397A5D50B7 /* Nimble.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 7BE48F194BFF9CA61B5D3D3642E1E19C;
+			remoteInfo = Nimble;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04253B5BE017880DFBFE90C41E022183 /* LookinServer */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LookinServer; path = LookinServer.xcodeproj; sourceTree = "<group>"; };
+		0715542763E3ECEC4138FA1CDF924F49 /* Flutter */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Flutter; path = Flutter.xcodeproj; sourceTree = "<group>"; };
+		11818DB76815C538FC805186BDF8FA33 /* Pods-HiRouter_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HiRouter_Tests-dummy.m"; sourceTree = "<group>"; };
+		118B51AEA39563284A9FC9B24B16074F /* Pods-HiRouter_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HiRouter_Example-dummy.m"; sourceTree = "<group>"; };
+		19AD37ABFFA9C4E147E3ED0E76E4AA23 /* Pods-HiRouter_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HiRouter_Tests.modulemap"; sourceTree = "<group>"; };
+		1E02080B769D9B6622BD5CA2DC514113 /* Pods-HiRouter_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HiRouter_Example.modulemap"; sourceTree = "<group>"; };
+		30E7DFCBD0ACE729058B4E9385B61A1E /* Pods-HiRouter_Example */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-HiRouter_Example"; path = "libPods-HiRouter_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3898F2292F9EA51AAAF0142413FE28A8 /* Pods-HiRouter_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HiRouter_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		4D07CF14FDE6D5A220CE5A75334A2006 /* FlutterPluginRegistrant */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FlutterPluginRegistrant; path = FlutterPluginRegistrant.xcodeproj; sourceTree = "<group>"; };
+		51E8AAFA670AEC4E32F3CF093CAD947D /* Pods-HiRouter_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HiRouter_Example.release.xcconfig"; sourceTree = "<group>"; };
+		60FFF60FCE093C668A0376AF938FD8AA /* SnapKit */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SnapKit; path = SnapKit.xcodeproj; sourceTree = "<group>"; };
+		75FC93B6E8B8E0DEE269755FC89BAFE8 /* Pods-HiRouter_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HiRouter_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		7EC05EC19924E3E461FBF5BB85053E3A /* HiRouter */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HiRouter; path = HiRouter.xcodeproj; sourceTree = "<group>"; };
+		973DE084ED387E3289F7A0397A5D50B7 /* Nimble */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Nimble; path = Nimble.xcodeproj; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AD6ED83392F2A5914CDFCB3F7EC2C03E /* hi_flutter */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = hi_flutter; path = hi_flutter.xcodeproj; sourceTree = "<group>"; };
+		AF5CCCA4D5B011313A4E476282F054EC /* Pods-HiRouter_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HiRouter_Example-frameworks.sh"; sourceTree = "<group>"; };
+		B4D7729E6C028385631A08F5853F511E /* Pods-HiRouter_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HiRouter_Example-umbrella.h"; sourceTree = "<group>"; };
+		BC3F02901D03EA7B722C551D8DC41851 /* Pods-HiRouter_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HiRouter_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CEE699855D0030DCE0C4098C04949212 /* Pods-HiRouter_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HiRouter_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		DFE908BDD0D6DF740AA487C8EC34249A /* Pods-HiRouter_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HiRouter_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		ED9B97D6FB425622597D9412355FF419 /* Pods-HiRouter_Tests */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-HiRouter_Tests"; path = "libPods-HiRouter_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F09D854B1A799E20ACCB75B4517BE68A /* Quick */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Quick; path = Quick.xcodeproj; sourceTree = "<group>"; };
+		F2734AC83F961584F2FD93E9E82236B4 /* Pods-HiRouter_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HiRouter_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F4AAD1C8C66D34E4BA7849EA2EFBCC88 /* Pods-HiRouter_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HiRouter_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		F9945CEB49E239AC0B2FAC852CB14D08 /* Pods-HiRouter_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HiRouter_Tests-umbrella.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		23DE217E9C65F6FE1E6CB29D9D3FA5DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		773CB5139A8A90026CFF12743818EE6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1102C7706C5A8DA6E39283A72BC1469D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				04253B5BE017880DFBFE90C41E022183 /* LookinServer */,
+				973DE084ED387E3289F7A0397A5D50B7 /* Nimble */,
+				F09D854B1A799E20ACCB75B4517BE68A /* Quick */,
+				60FFF60FCE093C668A0376AF938FD8AA /* SnapKit */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		599E8ACFD0F95BF3D4B3EF2905E71D2A /* Pods-HiRouter_Example */ = {
+			isa = PBXGroup;
+			children = (
+				1E02080B769D9B6622BD5CA2DC514113 /* Pods-HiRouter_Example.modulemap */,
+				BC3F02901D03EA7B722C551D8DC41851 /* Pods-HiRouter_Example-acknowledgements.markdown */,
+				F4AAD1C8C66D34E4BA7849EA2EFBCC88 /* Pods-HiRouter_Example-acknowledgements.plist */,
+				118B51AEA39563284A9FC9B24B16074F /* Pods-HiRouter_Example-dummy.m */,
+				AF5CCCA4D5B011313A4E476282F054EC /* Pods-HiRouter_Example-frameworks.sh */,
+				B4D7729E6C028385631A08F5853F511E /* Pods-HiRouter_Example-umbrella.h */,
+				3898F2292F9EA51AAAF0142413FE28A8 /* Pods-HiRouter_Example.debug.xcconfig */,
+				51E8AAFA670AEC4E32F3CF093CAD947D /* Pods-HiRouter_Example.release.xcconfig */,
+			);
+			name = "Pods-HiRouter_Example";
+			path = "Target Support Files/Pods-HiRouter_Example";
+			sourceTree = "<group>";
+		};
+		71EE56F4AB43E3BF9C7D0852EB983A49 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				599E8ACFD0F95BF3D4B3EF2905E71D2A /* Pods-HiRouter_Example */,
+				B45577A377C0CD8F5A6CE736BE9A73D8 /* Pods-HiRouter_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B45577A377C0CD8F5A6CE736BE9A73D8 /* Pods-HiRouter_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				19AD37ABFFA9C4E147E3ED0E76E4AA23 /* Pods-HiRouter_Tests.modulemap */,
+				F2734AC83F961584F2FD93E9E82236B4 /* Pods-HiRouter_Tests-acknowledgements.markdown */,
+				75FC93B6E8B8E0DEE269755FC89BAFE8 /* Pods-HiRouter_Tests-acknowledgements.plist */,
+				11818DB76815C538FC805186BDF8FA33 /* Pods-HiRouter_Tests-dummy.m */,
+				F9945CEB49E239AC0B2FAC852CB14D08 /* Pods-HiRouter_Tests-umbrella.h */,
+				DFE908BDD0D6DF740AA487C8EC34249A /* Pods-HiRouter_Tests.debug.xcconfig */,
+				CEE699855D0030DCE0C4098C04949212 /* Pods-HiRouter_Tests.release.xcconfig */,
+			);
+			name = "Pods-HiRouter_Tests";
+			path = "Target Support Files/Pods-HiRouter_Tests";
+			sourceTree = "<group>";
+		};
+		C4EC648E1B5B537CB435E4F0234F86A0 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0715542763E3ECEC4138FA1CDF924F49 /* Flutter */,
+				4D07CF14FDE6D5A220CE5A75334A2006 /* FlutterPluginRegistrant */,
+				AD6ED83392F2A5914CDFCB3F7EC2C03E /* hi_flutter */,
+				7EC05EC19924E3E461FBF5BB85053E3A /* HiRouter */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		CB2D8E5F8FA26C882ED79FD4134C9191 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				30E7DFCBD0ACE729058B4E9385B61A1E /* Pods-HiRouter_Example */,
+				ED9B97D6FB425622597D9412355FF419 /* Pods-HiRouter_Tests */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				C4EC648E1B5B537CB435E4F0234F86A0 /* Development Pods */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				1102C7706C5A8DA6E39283A72BC1469D /* Pods */,
+				CB2D8E5F8FA26C882ED79FD4134C9191 /* Products */,
+				71EE56F4AB43E3BF9C7D0852EB983A49 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		77A3CD69D9FC56A654104264EDC71889 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A7BA4D5D24FA7B816ED9E2FA663F462 /* Pods-HiRouter_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EADA05039E84486BA101A62D47BA639C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17494EBF1602FA3700885556796C3EB1 /* Pods-HiRouter_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2C8CB98D288033CF64EDF378A8EBCB51 /* Pods-HiRouter_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A9DDA476618B32D58CC439C4F32E9E6 /* Build configuration list for PBXNativeTarget "Pods-HiRouter_Tests" */;
+			buildPhases = (
+				EADA05039E84486BA101A62D47BA639C /* Headers */,
+				0E5D4A84087B6C776268E1EB916847DD /* Sources */,
+				23DE217E9C65F6FE1E6CB29D9D3FA5DA /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				663F255B0E9455A2114012FC08BE72FD /* PBXTargetDependency */,
+				17D7B1EF6F73F690616E48874090196D /* PBXTargetDependency */,
+				B4B7455087023E40408336C0AE7BF8A2 /* PBXTargetDependency */,
+			);
+			name = "Pods-HiRouter_Tests";
+			productName = "Pods-HiRouter_Tests";
+			productReference = ED9B97D6FB425622597D9412355FF419 /* Pods-HiRouter_Tests */;
+			productType = "com.apple.product-type.library.static";
+		};
+		ACBEF5BBA74291254AEC078C0DBC4914 /* Pods-HiRouter_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0025EC0D2472E724E4AB4AFCB474B902 /* Build configuration list for PBXNativeTarget "Pods-HiRouter_Example" */;
+			buildPhases = (
+				77A3CD69D9FC56A654104264EDC71889 /* Headers */,
+				F6D3BCD641A96CFFDD3B60C0B723DFC6 /* Sources */,
+				773CB5139A8A90026CFF12743818EE6F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8714E18DD3D55E930D7382DF6CF0FF46 /* PBXTargetDependency */,
+				0D7340DDDB6299DBCCC35CAEAE7751CB /* PBXTargetDependency */,
+				4B3F8EA3880625352BECC518ACF2585A /* PBXTargetDependency */,
+				20220B5ECB2FF6A222EC8E3C72B62B23 /* PBXTargetDependency */,
+				EC6AEEB141FA75C2E24113622080B55C /* PBXTargetDependency */,
+				5FE976F2AAAC4326108641132468082D /* PBXTargetDependency */,
+			);
+			name = "Pods-HiRouter_Example";
+			productName = "Pods-HiRouter_Example";
+			productReference = 30E7DFCBD0ACE729058B4E9385B61A1E /* Pods-HiRouter_Example */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = CB2D8E5F8FA26C882ED79FD4134C9191 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProjectRef = 0715542763E3ECEC4138FA1CDF924F49 /* Flutter */;
+				},
+				{
+					ProjectRef = 4D07CF14FDE6D5A220CE5A75334A2006 /* FlutterPluginRegistrant */;
+				},
+				{
+					ProjectRef = 7EC05EC19924E3E461FBF5BB85053E3A /* HiRouter */;
+				},
+				{
+					ProjectRef = 04253B5BE017880DFBFE90C41E022183 /* LookinServer */;
+				},
+				{
+					ProjectRef = 60FFF60FCE093C668A0376AF938FD8AA /* SnapKit */;
+				},
+				{
+					ProjectRef = AD6ED83392F2A5914CDFCB3F7EC2C03E /* hi_flutter */;
+				},
+				{
+					ProjectRef = 973DE084ED387E3289F7A0397A5D50B7 /* Nimble */;
+				},
+				{
+					ProjectRef = F09D854B1A799E20ACCB75B4517BE68A /* Quick */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				ACBEF5BBA74291254AEC078C0DBC4914 /* Pods-HiRouter_Example */,
+				2C8CB98D288033CF64EDF378A8EBCB51 /* Pods-HiRouter_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0E5D4A84087B6C776268E1EB916847DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA3D78EB2EFACB22CC6DCA813E77DB7F /* Pods-HiRouter_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6D3BCD641A96CFFDD3B60C0B723DFC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34E0E7F83EAF332E45C41B3C38AE8AEA /* Pods-HiRouter_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0D7340DDDB6299DBCCC35CAEAE7751CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FlutterPluginRegistrant;
+			targetProxy = E8BCB70BA1729BDEC7384568A8EDA4DD /* PBXContainerItemProxy */;
+		};
+		17D7B1EF6F73F690616E48874090196D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-HiRouter_Example";
+			target = ACBEF5BBA74291254AEC078C0DBC4914 /* Pods-HiRouter_Example */;
+			targetProxy = E5FE7DFD502FDA3D6F4832BFA135DF13 /* PBXContainerItemProxy */;
+		};
+		20220B5ECB2FF6A222EC8E3C72B62B23 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LookinServer;
+			targetProxy = 5F198AA45E49E42437357DD5931734E5 /* PBXContainerItemProxy */;
+		};
+		4B3F8EA3880625352BECC518ACF2585A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HiRouter;
+			targetProxy = 6961ACC51A93630FD8BA46EAC18E06D5 /* PBXContainerItemProxy */;
+		};
+		5FE976F2AAAC4326108641132468082D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = hi_flutter;
+			targetProxy = 21EC766A3904A65A144CB3CB99A3252D /* PBXContainerItemProxy */;
+		};
+		663F255B0E9455A2114012FC08BE72FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Nimble;
+			targetProxy = FD5A8337D6D4ACA426F6587E327A1C94 /* PBXContainerItemProxy */;
+		};
+		8714E18DD3D55E930D7382DF6CF0FF46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Flutter;
+			targetProxy = 28C1428302CCC8739F6443A9858489C7 /* PBXContainerItemProxy */;
+		};
+		B4B7455087023E40408336C0AE7BF8A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Quick;
+			targetProxy = 400FD356746FDAD5F7ACA38C8E0C3CFD /* PBXContainerItemProxy */;
+		};
+		EC6AEEB141FA75C2E24113622080B55C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SnapKit;
+			targetProxy = AD0687B32E1FF86560CB074FD5B6F62F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		59B8125A701EAA11234CC18961D2E842 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFE908BDD0D6DF740AA487C8EC34249A /* Pods-HiRouter_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HiRouter_Tests/Pods-HiRouter_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6FCE08A2EDB7CD59F40C057B6EF009D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEE699855D0030DCE0C4098C04949212 /* Pods-HiRouter_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HiRouter_Tests/Pods-HiRouter_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7EE7A78859F657F6BEFC651185B43192 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		9606B80ECF8FAAD6EDE5CB4F3049B158 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3898F2292F9EA51AAAF0142413FE28A8 /* Pods-HiRouter_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HiRouter_Example/Pods-HiRouter_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BFC50852F3568A00555392DC26F84326 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51E8AAFA670AEC4E32F3CF093CAD947D /* Pods-HiRouter_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HiRouter_Example/Pods-HiRouter_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D299434AB35E7FD6F7921C8EF24742FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0025EC0D2472E724E4AB4AFCB474B902 /* Build configuration list for PBXNativeTarget "Pods-HiRouter_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9606B80ECF8FAAD6EDE5CB4F3049B158 /* Debug */,
+				BFC50852F3568A00555392DC26F84326 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A9DDA476618B32D58CC439C4F32E9E6 /* Build configuration list for PBXNativeTarget "Pods-HiRouter_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59B8125A701EAA11234CC18961D2E842 /* Debug */,
+				6FCE08A2EDB7CD59F40C057B6EF009D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D299434AB35E7FD6F7921C8EF24742FF /* Debug */,
+				7EE7A78859F657F6BEFC651185B43192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

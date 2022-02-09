@@ -1,0 +1,37 @@
+{
+  "name": "HiRouter",
+  "version": "0.1.0",
+  "summary": "A short description of HiRouter.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/GG526/HiRouter",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "GG526": "lanqing0326@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/GG526/HiRouter.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "default_subspecs": "Core",
+  "subspecs": [
+    {
+      "name": "Core",
+      "source_files": "HiRouter/Classes/Core/**/*"
+    },
+    {
+      "name": "Web",
+      "source_files": "HiRouter/Classes/Web/**/*",
+      "dependencies": {
+        "HiRouter/Core": [
+
+        ]
+      }
+    }
+  ]
+}

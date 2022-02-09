@@ -1,0 +1,6 @@
+module Pods_HiRouter_Tests {
+  umbrella header "Pods-HiRouter_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

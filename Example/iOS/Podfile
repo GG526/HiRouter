@@ -1,0 +1,31 @@
+
+source 'https://cdn.cocoapods.org/'
+
+
+platform :ios, "10.0"
+
+install! 'cocoapods',
+  :disable_input_output_paths => true,
+  :generate_multiple_pod_projects => true,
+  :warn_for_unused_master_specs_repo => false
+
+def load_flutter
+  flutter_application_path = '../hi_flutter'
+  load File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')
+  install_all_flutter_pods(flutter_application_path)
+end
+
+target 'HiRouter_Example' do
+
+  load_flutter
+  pod 'HiRouter', :path => '../../', :subspecs => ['Core', 'Web']
+  pod 'LookinServer', :configurations => ['Debug']
+  pod 'SnapKit', '5.0.1'
+  
+  target 'HiRouter_Tests' do
+    inherit! :search_paths
+    
+    pod 'Quick', '~> 4.0.0'
+    pod 'Nimble', '~> 9.2.1'
+  end
+end
