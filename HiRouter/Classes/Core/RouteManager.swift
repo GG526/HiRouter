@@ -38,37 +38,50 @@ open class RouteManager {
     /// - Parameters:
     ///   - app: app scheme.
     ///   - router: Router.
-    open func register(app: String, router: Router) {
+    @discardableResult
+    open func register(app: String, router: Router) -> Bool {
         assert(Thread.isMainThread, "需要在主线程中")
         if !entity.apps.contains(app) {
             entity.apps.append(app)
         }
-        entity.modules[fetchModuleKey(app: app, module: router.module)] = router
+        let key = fetchModuleKey(app: app, module: router.module)
+        var routers = entity.modules[key] ?? []
+        let type = "\(type(of: router))"
+        guard !entity.registered.contains(type) else {
+            HiPrint(type, "已注册, 请勿重复注册!", level: .ERROR)
+            return false
+        }
+        entity.registered.append(type)
+        routers.append(router)
+        entity.modules[key] = routers
+        return true
     }
     
-    /// 注销路由.
+    /// 注销模块所有路由.
     /// - Parameters:
     ///   - app: app scheme.
     ///   - module: 模块名, host.
-    open func destroy(app: String, module: String) {
+    @discardableResult
+    open func destroy(app: String, module: String) -> Bool{
         assert(Thread.isMainThread, "需要在主线程中")
         entity.modules[fetchModuleKey(app: app, module: module)] = nil
+        return true
     }
     
     /// 添加监听.
     /// - Parameter observer: RouterObserver
     open func add(observer: RouterObserver) {
         assert(Thread.isMainThread, "需要在主线程中")
-        entity.subscribers[observer.module]?.append(observer)
+        var observers = entity.subscribers[observer.module] ?? NSHashTable.init(options: .weakMemory)
+        observers.add(observer)
+        entity.subscribers[observer.module] = observers
     }
     
     /// 删除监听.
     /// - Parameter observer: RouterObserver
     open func remove(observer: RouterObserver) {
         assert(Thread.isMainThread, "需要在主线程中")
-        entity.subscribers[observer.module]?.removeAll(where: {
-            $0 === observer
-        })
+        entity.subscribers[observer.module]?.remove(observer)
     }
     
     /// 能否打开URL.
@@ -96,10 +109,21 @@ open class RouteManager {
     /// - Returns: result.
     open func can(open app: String, module: String, method: String) -> Bool {
         assert(Thread.isMainThread, "需要在主线程中")
-        guard let router = fetchRouter(app: app, module: module) else {
+        
+        let cacheKey = fetchCacheKey(app: app, module: module, method: method)
+        if entity.cacheModule.object(forKey: cacheKey) != nil {
+            return true
+        }
+        guard let routers = fetchRouter(app: app, module: module) else {
             return false
         }
-        return router.supportMethods.contains(method)
+        for router in routers {
+            if router.supportMethods.contains(method) {
+                entity.cacheModule.setObject(router, forKey: cacheKey)
+                return true
+            }
+        }
+        return false
     }
     
     /// open.
@@ -120,7 +144,7 @@ open class RouteManager {
     ///   - completion: completion.
     /// - Returns: status.
     @discardableResult
-    open func open(_ url: URL, options: [String: Any]?, completion: ((Any?) -> Void)? = nil) -> Bool{
+    open func open(_ url: URL, options: Any?, completion: ((Any?) -> Void)? = nil) -> Bool{
         guard let app = url.scheme, !app.isEmpty, entity.apps.contains(app) else {
             unfoundRouter("", module: "", method: "")
             completion?(RouterError.unfoundApp)
@@ -149,18 +173,38 @@ open class RouteManager {
     ///   - completion: completion.
     /// - Returns: status
     @discardableResult
-    open func open(app: String, module: String, method: String, port: Int?, options: [String: Any]?, completion: ((Any?) -> Void)? = nil) -> Bool {
+    open func open(app: String, module: String, method: String, port: Int?, options: Any?, completion: ((Any?) -> Void)? = nil) -> Bool {
         assert(Thread.isMainThread, "需要在主线程中")
-        guard let router = fetchRouter(app: app, module: module) else {
+        
+        func unfound(error: Error) {
             unfoundRouter(app, module: module, method: method)
-            completion?(RouterError.unfoundRouter)
+            completion?(error)
+        }
+        
+        let cacheKey = fetchCacheKey(app: app, module: module, method: method)
+        if let router = entity.cacheModule.object(forKey: cacheKey) as? Router {
+            let status = router.router(self, open: method, port: port, options: options, completion: completion)
+            if !status {
+                unfound(error: RouterError.unfoundMethod)
+            }
+            return status
+        }
+        guard let routers = fetchRouter(app: app, module: module) else {
+            unfound(error: RouterError.unfoundRouter)
             return false
         }
-        let status = router.router(self, open: method, port: port, options: options, completion: completion)
-        if !status {
-            unfoundRouter(app, module: module, method: method)
+        for router in routers {
+            if router.supportMethods.contains(method) {
+                entity.cacheModule.setObject(router, forKey: cacheKey)
+                let status = router.router(self, open: method, port: port, options: options, completion: completion)
+                if !status {
+                    unfound(error: RouterError.unfoundMethod)
+                }
+                return status
+            }
         }
-        return status
+        unfound(error: RouterError.unfoundRouter)
+        return false
     }
     
     /// invoke.
@@ -181,7 +225,7 @@ open class RouteManager {
     ///   - completion: completion.
     /// - Returns: status.
     @discardableResult
-    open func invoke(_ url: URL, options: [String: Any]?, completion: ((Any?) -> Void)? = nil) -> Bool{
+    open func invoke(_ url: URL, options: Any?, completion: ((Any?) -> Void)? = nil) -> Bool{
         guard let module = url.host, !module.isEmpty else {
             completion?(RouterError.unfoundModule)
             return false
@@ -203,16 +247,17 @@ open class RouteManager {
     ///   - completion: completion.
     /// - Returns: status.
     @discardableResult
-    open func invoke(module: String, method: String, port: Int?, options: [String: Any]?, completion: ((Any?) -> Void)? = nil) -> Bool{
+    open func invoke(module: String, method: String, port: Int?, options: Any?, completion: ((Any?) -> Void)? = nil) -> Bool{
         assert(Thread.isMainThread, "需要在主线程中")
-    
-        guard let observers = entity.subscribers[module], !observers.isEmpty else {
+        guard let observers = entity.subscribers[module], observers.count > 0 else {
             completion?(RouterError.unfoundObserver)
             return false
         }
-        observers.forEach({
-            _ = $0.router(self, invoke: method, port: port, options: options, completion: completion)
-        })
+        for item in observers.objectEnumerator() {
+            if let router = item as? RouterObserver {
+               _ = router.router(self, invoke: method, port: port, options: options, completion: completion)
+            }
+        }
         return true
     }
         
@@ -222,11 +267,16 @@ open class RouteManager {
     }
     
     //MARK: - private function
+    
+    private func fetchCacheKey(app: String, module: String, method: String) -> NSString {
+        return (app + "/" + module + "/" + method) as NSString
+    }
+    
     private func fetchModuleKey(app: String, module: String) -> String {
         return app + "/" + module
     }
     
-    private func fetchRouter(app: String, module: String) -> Router? {
+    private func fetchRouter(app: String, module: String) -> [Router]? {
         return entity.modules[fetchModuleKey(app: app, module: module)]
     }
     
